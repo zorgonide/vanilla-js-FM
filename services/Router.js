@@ -29,7 +29,7 @@ const Router = {
                 pageElement.textContent = 'Order';
                 break;
             default:
-                if (route.startWith('/product-')) {
+                if (route.startsWith('/product-')) {
                     const productId = route.split('-')[1];
                     pageElement = document.createElement('h1');
                     pageElement.textContent = `Product ${productId}`;
