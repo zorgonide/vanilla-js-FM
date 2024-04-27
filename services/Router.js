@@ -21,18 +21,15 @@ const Router = {
         let pageElement = null;
         switch (route) {
             case '/':
-                pageElement = document.createElement('h1');
-                pageElement.textContent = 'Home';
+                pageElement = document.createElement('menu-page');
                 break;
             case '/order':
-                pageElement = document.createElement('h1');
-                pageElement.textContent = 'Order';
+                pageElement = document.createElement('order-page');
                 break;
             default:
                 if (route.startsWith('/product-')) {
                     const productId = route.split('-')[1];
-                    pageElement = document.createElement('h1');
-                    pageElement.textContent = `Product ${productId}`;
+                    pageElement = document.createElement('details-page');
                     pageElement.dataset.id = productId;
                 }
         }
